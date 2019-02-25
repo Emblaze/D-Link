@@ -99,6 +99,45 @@ DNA uses **SNMP** to discover hardware & IP's.
 | ------- | ------------ |
 | DCS     | 192.168.0.20 |
 
+#### Access Point Modes
+
+##### Access Point Mode
+
+Access Point mode is used to connect to wireless clients(wireless adapter cards) such as laptops, desktops, and PDAs. Wireless clients can only communicate to AP's in Access Point mode.
+
+##### Access Point Client / Wireless Client Mode
+
+AP Client or Wireless Client mode allows the Access Point to become a wireless client to another AP. In essence the AP has now become a wireless adapter card. You would use this mode to allow an AP to communicate with another AP.
+
+Note: Not all Access Points support AP Client mode. If the mode is supported it will operate only with devices of the same series. Wireless cards will not communicate with access points in AP Client/ Wireless Client mode.
+
+##### Point-to-Point / Wireless Bridge
+
+Point-to-Point / Wireless Bridge mode allows the Access Point to communicate with another Access Point capable of point-to-point bridging. However, be aware that most manufacturers use proprietary settings when enabling bridging mode in the Access Point. A typical scenario for this selection is connecting two buildings through a wireless connection.
+
+Note: Not all Access Points support Point-to-Point / Wireless Bridging mode. If the mode is supported it will operate only with devices of the same series. Example: the DWL-900AP will communicate with another DWL-900AP, and the DWL-900AP will communicate with another DWL-900AP . The DWL-900AP will not communicate with aDWL-900AP in this mode. Wireless clients will not communicate to AP's in this mode.
+
+##### Point-to-Multipoint / Multi-point Bridge
+
+Point-to-Multi-point / Multi-point Bridge mode is the same as Point-to-point / Wireless Bridge mode, however, this mode allows you to use more than two Access Points.
+
+Note: Not all Access Points support Point-to-Multipoint /Wireless Bridging mode. If the mode is supported it will operate only with devices of the same series. Example: the DWL-900AP will communicate with another DWL-900AP, and the DWL-900AP will communicate with another DWL-900AP . The DWL-900AP will not communicate with a DWL-900AP in this mode. Wireless clients will not communicate to AP's in this mode.
+
+##### Repeater Mode
+
+As a Wireless Repeater, the Access Point extends the range of the wireless network by repeating the wireless signal of the remote AP (Access Point). The Ethernet MAC address of the remote AP is required for the Access Point to act as a wireless range extender.
+
+Note: Not all Access Points support Repeater mode. If the mode is supported it will operate only with devices of the same series. Example: the DWL-1000AP will communicate with another DWL-1000AP ,and the DWL-900AP will communicate with another DWL-900AP . TheDWL-1000AP will not communicate with a DWL-900AP in this mode. Wireless clients will communicate to APs in this mode.
+
+##### WDS Mode
+
+The Wireless Distribution System (WDS) mode is similar to the Bridge mode. In WDS mode you can get your Access Points to communicate with each other wirelessly. Note that in this mode the access points will not communicate with wireless clients.
+
+##### WDS with AP Mode
+
+This mode allows your Access Points to communicate with each other wirelessly and at the same time allows wireless clients to connect to the network.
+
+
 ## Product Configuration Basics
 
  Some product features/capacity require addtional licence(s):exclamation:
