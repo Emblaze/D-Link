@@ -25,7 +25,7 @@
 
 
 
-## Technical Support Contact details
+## Technical Support Contact Details
 
 Monday to Friday, 9:00 am - 7:00 pm (except bank holidays)
 
@@ -37,17 +37,15 @@ Monday to Friday, 9:00 am - 7:00 pm (except bank holidays)
 | Italy   | +39               |
 | UK      | +44               |
 
-#### Self-service Portal
+#### Self-service Portal [services.eu.dlink.com](http://services.eu.dlink.com)
 
 [Registered Customer](http://services.eu.dlink.com/home/main/SSPLogin.aspx?jdecloselink=http%3A%2F%2Fwww.dlink.com%2Ffr%2Ffr%2Fsupport%2Fproduct-registration-and-support-log-in&language=F) | [New customer](http://services.eu.dlink.com/home/main/CustomerRegister.aspx?jdecloselink=http%3A%2F%2Fwww.dlink.com%2Ffr%2Ffr%2Fsupport%2Fproduct-registration-and-support-log-in&language=F)
 
 #### [Chat](https://www.livechatinc.com/?partner=lc_4932971&utm_source=chat_button)
 
-
-
 ## Networking Fundamentals
 
-![IPv4 Address](media/300px-Ipv4_address.svg.png)
+![IPv4 Address](media/300px-Ipv4_address.svg.png)/ Notion of IP Classes
 
 | Device type   | Connectivity | Services                | Notes                     |
 | ------------- | ------------ | ----------------------- | ------------------------- |
@@ -59,7 +57,7 @@ Monday to Friday, 9:00 am - 7:00 pm (except bank holidays)
 ## Customer links of interest
 
 *   [EU Website](https://eu.dlink.com/fr/fr)
-*   [FTP site](ftp://ftp.dlink.eu/)
+*   [EU FTP site](ftp://ftp.dlink.eu/)
 *   [DLink Network Assistant (DNA)](ftp://ftp.dlink.eu/Products/dna/dna/driver_software/DNA_sw_4-0-0-8_eu_en_20180307.zip)
 *   [DNA Chrome extension](https://chrome.google.com/webstore/detail/d-link-network-assistant/eoenegoacckkpkijhfhijfechhhpkbmp?hl=en)
 *   [mydlink](https://www.mydlink.com/download)
@@ -67,9 +65,22 @@ Monday to Friday, 9:00 am - 7:00 pm (except bank holidays)
 
 DNA uses **SNMP** to discover hardware & IP's.
 
-## Main product families
+## Product Configuration Basics
 
-### Switches
+Some product features/capacity require addtional licence(s):exclamation:
+
+### DIR/DSL/DWR Routers
+
+
+
+### DSR 250(N)/500(N)/1000(N) Series Routers
+
+
+
+### DES/DGS/DXS Switches
+
+Generally deployed in conjonction with a router (upstream), an AP controller (and AP´s).
+No DHCP server included, uses broadcast domain (aka "APIPA") address by default.
 
 | Switches | Default IP  | Notes      |
 | -------- | ----------- | ---------- |
@@ -78,16 +89,65 @@ DNA uses **SNMP** to discover hardware & IP's.
 | DES      | 10.90.90.90 |            |
 | DXS      | 10.90.90.90 | Stacking   |
 
+*   Related Wikipedia Links
+[VLAN](https://en.wikipedia.org/wiki/Virtual_LAN)
+[VLAN Tagging (IEEE 802.1Q)](https://en.wikipedia.org/wiki/IEEE_802.1Q)
+[Link aggregation/Trunking](https://en.wikipedia.org/wiki/Link_aggregation)
+[Quality of Service](https://en.wikipedia.org/wiki/Quality_of_service)
+
+#### VLAN´s Setup (LAN to LAN)
+
+ VLAN modes: **Access** only, **General** and **Trunk (recommended)**.
+
+ VLAN ports can be either **Tagged** (to allow Router-level defined VLAN´s to be deployed at switch level, QoS, Firewall, VPN), **Untagged** (for client/management) and **Not member**.
+
+ **Caveats**:
+
+*   For firmware upgrades, ensure it´s downloaded from the right country website **&** that it matches the product revision.
+*   If a manageable switch has no management VLAN, define VLAN1 port to allow management.
+*   Captive portals can only be setup at default VLAN1 level.
+*   VPN IPSec ???
+
+#### DWC 1000/2000 Access Point Controllers
+
+Allows control of DWL AP series.
+1.  Make sure the laptop/desktop and AP controller ar on the same subnet/network segment
+2.  Setup LAN settings and enable DHCP
+
+| Setting  | Default       |
+| -------- | ------------- |
+| IP       | 192.168.10.1  |
+| Mask     | 255.255.255.0 |
+| Usermane | admin         |
+| Password | admin         |
+
 ### Access Point Controllers
 
 | Access Point Controllers | Access Points | Default IP   | Notes                            |
 | ------------------------ | ------------- | ------------ | -------------------------------- |
 | DWS (Manageable)         |               |              |                                  |
-| DWC                      | DAP*          | 192.168.10.1 | Computer must on the same subnet |
+| DWC                      | DAP*          | 192.168.10.1 | Computer must be on the same subnet |
 | Nuclias                  | DBA*          | [nuclias.com](https://www.nuclias.com)  | SaaS                             |
 \*Some DAP/DBA cannot be managed.
 
+*   Check and Adjust DHCP server settings.
+*   Create and deploy profiles
+
+Caveat: Pushing configuration changes disconnects users.
+
 ### Access Points
+
+Recommended max.  # of AP´s: 34
+
+Mind the PoE power/Watt budget
+
+Tip: Save configuration changes often to avoid reconfiguration after short timeout
+
+*   **Multi-SSID** (Primary, S1, S2, ..., Sn)
+
+*   **Port VLAN´s ID´s** (PVID) must **match** router-level defined VLAN ID´s. Enabling AUTO is recommended.
+
+*   **Modify** AP´s IP address, save configuration and test it from a client.
 
 | Access Points | Default IP   | Notes              |
 | ------------- | ------------ | ------------------ |
@@ -137,29 +197,6 @@ The Wireless Distribution System (WDS) mode is similar to the Bridge mode. In WD
 
 This mode allows your Access Points to communicate with each other wirelessly and at the same time allows wireless clients to connect to the network.
 
-
-## Product Configuration Basics
-
- Some product features/capacity require addtional licence(s):exclamation:
-
-*   ### DWC 1000/2000 Access Point Controllers
-
-    Allows control of DWL AP series.
-
-1.  Make sure the laptop/desktop and AP controller ar on the same subnet/network segment
-
-2.  Setup LAN settings and enable DHCP
-
-| Setting  | Default       |
-| -------- | ------------- |
-| IP       | 192.168.10.1  |
-| Mask     | 255.255.255.0 |
-| Usermane | admin         |
-| Password | admin         |
-
-*   ### DSR 250(N)/500(N)/1000(N) Series Routers
-
-
 ## FAQ
 
 *   ### Stacking
@@ -171,3 +208,30 @@ This mode allows your Access Points to communicate with each other wirelessly an
     3.  What type of fiber is used?
 
     4.  What is the length of the cable between the switches?
+
+## Processes
+
+### JDE
+
+| JDE | Status Rules |
+| --- | ------------ |
+| 100 | Unassigned / New. This is an automatic status while creating a new case.. New SS case created will use automatically the status 100. These cases must be managed as soon as possible (ref. D‐Link – MST agreement) |
+| 105 | Escalated. To be used when escalate a case to an upper level. (2nd, 3rd or RMA) |
+| 110 | Open / Active. Use this status when opening a case. At the end of the call, the status of the case must be changed to 130, 200, 210, 105 or 999. |
+| 120 | Reopen / Review. This status can be used only for re‐open a complete case (999) (Otherwise you’ll receive an error message). |
+| 130 | Research. Use this status when further information are needed therefore you are planning a callback to customer. Do not leave the cases in that state for more than 10 days. |
+| 200 | Waiting for Customer. Use this status when customer have to provide some info related the issue (driver version, Fw version, etc). Do not leave the cases in that state for more than 10 days. |
+| 210 | Waiting for POP. Use this status when customer have to provide a Proof of Purchase or the picture of the label of the Serial Number. Do not leave the cases in that state for more than 10 days. |
+| 995 | Spam – Cancelled. Use this status when you receive a spam. |
+| 997 | Cancelled. Use this status to close duplicate case |
+| 999 | Complete. Use this status when a case is solved or when you provide to customer a solution. |
+
+
+
+| JDE Presales rules                       |
+| ---------------------------------------- |
+| Must be a CN case (no serial available)  |
+| Description of the case must be PRESALES |
+| Failure code must be: ‘C1’               |
+| Analysis code must be: ‘C2’              |
+| Resolution must be: ‘N4’                 |
