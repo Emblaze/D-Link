@@ -29,18 +29,15 @@ Monday to Friday, 9:00 am - 7:00 pm (except bank holidays)
 | Italy    | +39               |
 | Spain    | +34               |
 | Portugal | +351              |
-| UK       | +44               |
+| UK       | +44 843 508 6179  |
 
 ### D-Link Knowledge Base
 
 [D-Link Knowledge Base](http://dse-kb.dlink.it/index.php)
 
-
 ### Self-service Portal [services.eu.dlink.com](http://services.eu.dlink.com)
 
 [Registered Customer](http://services.eu.dlink.com/home/main/SSPLogin.aspx?jdecloselink=http%3A%2F%2Fwww.dlink.com%2Ffr%2Ffr%2Fsupport%2Fproduct-registration-and-support-log-in&language=F) | [New customer](http://services.eu.dlink.com/home/main/CustomerRegister.aspx?jdecloselink=http%3A%2F%2Fwww.dlink.com%2Ffr%2Ffr%2Fsupport%2Fproduct-registration-and-support-log-in&language=F)
-
-
 
 ### [Chat](https://www.livechatinc.com/?partner=lc_4932971&utm_source=chat_button)
 
@@ -146,9 +143,9 @@ Caveat: Pushing configuration changes in production disconnects users.
 
 ### Access Points
 
-Recommended max.  # of AP´s: 34
+Recommended max. # of AP´s: 34
 
-Mind the PoE power/Watt budget
+Mind the PoE power/Watts budget
 
 Tip: Save configuration changes often to avoid reconfiguration after short timeout
 
@@ -163,10 +160,6 @@ Tip: Save configuration changes often to avoid reconfiguration after short timeo
 | DAP           | 192.168.0.50 | Manageable via CWM |
 | DBA           | nuclias.com  |                    |
 | DWL           | 10.90.90.91  | Manageable via DWC |
-
-| Cameras | Default IP   |
-| ------- | ------------ |
-| DCS     | 192.168.0.20 |
 
 #### Access Point Modes
 
@@ -206,6 +199,12 @@ The Wireless Distribution System (WDS) mode is similar to the Bridge mode. In WD
 
 This mode allows your Access Points to communicate with each other wirelessly and at the same time allows wireless clients to connect to the network.
 
+### Cameras
+
+| Cameras | Default IP   |
+| ------- | ------------ |
+| DCS     | 192.168.0.20 |
+
 ## FAQ
 
 *   ### Stacking
@@ -220,7 +219,38 @@ This mode allows your Access Points to communicate with each other wirelessly an
 
 ## Processes
 
-### JDE
+### JDE E1, Cases and RMA's Management
+
+**[JDE login](https://pd812.erp.dlink.eu/jde/E1Menu.maf) > Customer Service Management > Case Management**
+
+**Caveat:** JDE times out after 10 to 20 min. Save your work regurlarly!
+
+| Customer   | Case Management Section  |
+| ---------- | ------------------------ |
+| Without SN | Case <country> L2 w/o SN |
+| With SN    | Case <country> L2        | 
+
+**Case Inquiry View Layout & Format**
+
+| Case History     | Internal TS History | Email Drafting |
+| ---------------- | ------------------- | -------------- |
+| Paste last Email | Follow below format | Use templates! |
+
+**Internal Troubleshooting History Format**
+
+DATE:
+
+AGENT:
+
+REASON OF CALL:
+
+-
+
+CUSTOMER TEST: None
+
+SOLUTION:
+
+**JDE Status Rules**
 
 | JDE | Status Rules |
 | --- | ------------ |
@@ -235,7 +265,7 @@ This mode allows your Access Points to communicate with each other wirelessly an
 | 997 | Cancelled. Use this status to close duplicate case |
 | 999 | Complete. Use this status when a case is solved or when you provide to customer a solution. |
 
-
+**JDE Presales Rules**
 
 | JDE Presales rules                       |
 | ---------------------------------------- |
@@ -244,3 +274,4 @@ This mode allows your Access Points to communicate with each other wirelessly an
 | Failure code must be: ‘C1’               |
 | Analysis code must be: ‘C2’              |
 | Resolution must be: ‘N4’                 |
+|                                          |
