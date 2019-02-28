@@ -17,31 +17,42 @@
 
 <!-- /TOC -->
 
-## Compatibility List
-
-
-
-## Knowledge Base
-
-
-
 ## Technical Support Contact Details
 
 Monday to Friday, 9:00 am - 7:00 pm (except bank holidays)
 
-#### Phone
+### Phone
 
-| Country | Phone number      |
-| ------- | ----------------- |
-| France  | +33 1 76 54 84 17 |
-| Italy   | +39               |
-| UK      | +44               |
+| Country  | Phone number      |
+| -------- | ----------------- |
+| France   | +33 1 76 54 84 17 |
+| Italy    | +39               |
+| Spain    | +34               |
+| Portugal | +351              |
+| UK       | +44               |
 
-#### Self-service Portal [services.eu.dlink.com](http://services.eu.dlink.com)
+### D-Link Knowledge Base
+
+[D-Link Knowledge Base](http://dse-kb.dlink.it/index.php)
+
+
+### Self-service Portal [services.eu.dlink.com](http://services.eu.dlink.com)
 
 [Registered Customer](http://services.eu.dlink.com/home/main/SSPLogin.aspx?jdecloselink=http%3A%2F%2Fwww.dlink.com%2Ffr%2Ffr%2Fsupport%2Fproduct-registration-and-support-log-in&language=F) | [New customer](http://services.eu.dlink.com/home/main/CustomerRegister.aspx?jdecloselink=http%3A%2F%2Fwww.dlink.com%2Ffr%2Ffr%2Fsupport%2Fproduct-registration-and-support-log-in&language=F)
 
-#### [Chat](https://www.livechatinc.com/?partner=lc_4932971&utm_source=chat_button)
+
+
+### [Chat](https://www.livechatinc.com/?partner=lc_4932971&utm_source=chat_button)
+
+## Customer links of interest
+
+*   [EU Website](https://eu.dlink.com/fr/fr)
+*   [EU FTP site](ftp://ftp.dlink.eu/)
+*   [DLink Network Assistant (DNA)](ftp://ftp.dlink.eu/Products/dna/dna/driver_software/DNA_sw_4-0-0-8_eu_en_20180307.zip)
+*   [DNA Chrome extension](https://chrome.google.com/webstore/detail/d-link-network-assistant/eoenegoacckkpkijhfhijfechhhpkbmp?hl=en)
+*   [mydlink](https://www.mydlink.com/download)
+*   [mydlink app](https://www.mydlink.com/apps)
+DNA uses **SNMP** to discover hardware & IP's.
 
 ## Networking Fundamentals
 
@@ -53,28 +64,26 @@ Monday to Friday, 9:00 am - 7:00 pm (except bank holidays)
 | Routers       | LAN to LAN   | Manual configuration    | No extra NAT level/subnet |
 |               | LAN to WAN   | Automatic configuration | Extra NAT level/subnet    |
 
-## Customer links of interest
-
-*   [EU Website](https://eu.dlink.com/fr/fr)
-*   [EU FTP site](ftp://ftp.dlink.eu/)
-*   [DLink Network Assistant (DNA)](ftp://ftp.dlink.eu/Products/dna/dna/driver_software/DNA_sw_4-0-0-8_eu_en_20180307.zip)
-*   [DNA Chrome extension](https://chrome.google.com/webstore/detail/d-link-network-assistant/eoenegoacckkpkijhfhijfechhhpkbmp?hl=en)
-*   [mydlink](https://www.mydlink.com/download)
-*   [mydlink app](https://www.mydlink.com/apps)
-
-DNA uses **SNMP** to discover hardware & IP's.
-
 ## Product Configuration Basics
 
-Some product features/capacity require addtional licence(s)
+Some product features/capacity require addtional for-pay licence(s).
 
-### DIR/DSL/DWR Routers
+### DWR Routers
 
+| Model   | Features |
+| ------- | -------- |
+| DWR‑921 | 4G/LTE   |
 
+DSL routers are handled by Level 1 Tech Support.
 
-### DSR 250(N)/500(N)/1000(N) Series Routers
+### DSR 250N/500N/1000N Series Routers
 
-
+| Model      | Users | Current Rev. | Notes |
+| ---------- | ----- | ------------ | ----- |
+| DSR-250N   | 10    | B            |       |
+| DSR-500N   | 25    |              | EOL   |
+| DSR-1000N  | 50    |              | EOL   |
+| DSR-1000AC | 50    | A            |       |
 
 ### DES/DGS/DXS Switches
 
@@ -83,7 +92,6 @@ No DHCP server included, uses broadcast domain (aka "APIPA") address by default.
 
 | Switches | Default IP  | Notes      |
 | -------- | ----------- | ---------- |
-| DWS      | 10.90.90.90 | Manageable |
 | DGS      | 10.90.90.90 |            |
 | DES      | 10.90.90.90 |            |
 | DXS      | 10.90.90.90 | Stacking   |
@@ -131,9 +139,10 @@ Allows control of DWL AP series.
 \*Some DAP/DBA cannot be managed.
 
 *   Check and Adjust DHCP server settings.
+*   Configure VLAN´s
 *   Create and deploy profiles
 
-Caveat: Pushing configuration changes disconnects users.
+Caveat: Pushing configuration changes in production disconnects users.
 
 ### Access Points
 

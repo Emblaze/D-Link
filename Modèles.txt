@@ -1,0 +1,13 @@
+POP
+
+Cher client,
+
+Afin de pouvoir lancer une demande d'échange, nous vous invitons à nous envoyer la facture d'achat de votre produit via notre portail :
+http://services.eu.dlink.com/home/main/SSPLogin.aspx?language=F
+
+Vous pouvez consulter le guide à l'adresse suivante :
+http://www.dlink.com/fr/fr/support/faq/service/consulter-ou-actualiser-vos-dossiers-existants
+
+Cordialement,
+
+L'équipe du Support technique D-Link.
