@@ -57,7 +57,7 @@ DNA uses **SNMP** to discover hardware & IP's.
 
 | Device type   | Connectivity | Services                | Notes                     |
 | ------------- | ------------ | ----------------------- | ------------------------- |
-| Modem Routers | ISP/LAN/WAN  | DHCP/DNS/NAT            |                           |
+| Modem Routers | ISP/LAN/WAN  | DHCP/DNS/NAT            | -                         |
 | Routers       | LAN to LAN   | Manual configuration    | No extra NAT level/subnet |
 |               | LAN to WAN   | Automatic configuration | Extra NAT level/subnet    |
 
@@ -157,9 +157,9 @@ Tip: Save configuration changes often to avoid reconfiguration after short timeo
 
 | Access Points | Default IP   | Notes              |
 | ------------- | ------------ | ------------------ |
-| DAP           | 192.168.0.50 | Manageable via CWM |
-| DBA           | nuclias.com  |                    |
-| DWL           | 10.90.90.91  | Manageable via DWC |
+| :	DAP:        | 192.168.0.50 | Manageable via CWM |
+| :	DBA:        | nuclias.com  |                    |
+| :	DWL:        | 10.90.90.91  | Manageable via DWC |
 
 #### Access Point Modes
 
@@ -201,9 +201,13 @@ This mode allows your Access Points to communicate with each other wirelessly an
 
 ### Cameras
 
+Several configuration options: via the Setup Wizard (Windows/Mac) or manually via the web interface (with a system on the same subnet).
+
+
+
 | Cameras | Default IP   |
 | ------- | ------------ |
-| DCS     | 192.168.0.20 |
+| :DCS:   | 192.168.0.20 |
 
 ## FAQ
 
@@ -225,10 +229,10 @@ This mode allows your Access Points to communicate with each other wirelessly an
 
 **Caveat:** JDE times out after 10 to 20 min. Save your work regurlarly!
 
-| Customer   | Case Management Section  |
-| ---------- | ------------------------ |
-| Without SN | Case <country> L2 w/o SN |
-| With SN    | Case <country> L2        | 
+| Customer   | Case Management Section  | Code in report |
+| ---------- | ------------------------ | -------------- |
+| Without SN | Case <country> L2 w/o SN | :CL:           |
+| With SN    | Case <country> L2        | :CN:           |
 
 **Case Inquiry View Layout & Format**
 
@@ -249,6 +253,18 @@ REASON OF CALL:
 CUSTOMER TEST: None
 
 SOLUTION:
+
+**Case Creation**
+
+JDE > Case Management SE > Case SE L2 > Add
+
+| Required Info           |
+| ----------------------- |
+| S/N                     |
+| First and last name     |
+| Company/organisation    |
+| Phone and Email         |
+| Fill in the 3 dropdowns |
 
 **JDE Status Rules**
 
@@ -274,4 +290,15 @@ SOLUTION:
 | Failure code must be: ‘C1’               |
 | Analysis code must be: ‘C2’              |
 | Resolution must be: ‘N4’                 |
-|                                          |
+
+## Phone/ACD System
+
+To place an outbound call, use 3 then country code + line number
+
+| Queue        | ACD  |
+| ------------ | ---- |
+| FR Consumer  | 5074 |
+| FR RMA       | 5078 |
+| FR Business  | 5075 |
+| FR Tech A    | 5083 |
+| FR Resellers | 5076 |

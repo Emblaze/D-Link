@@ -8,6 +8,32 @@ http://services.eu.dlink.com/home/main/SSPLogin.aspx?language=F
 Vous pouvez consulter le guide à l'adresse suivante :
 http://www.dlink.com/fr/fr/support/faq/service/consulter-ou-actualiser-vos-dossiers-existants
 
+N´hésitez pas à nous recontacter pour toute question.
+
 Cordialement,
 
 L'équipe du Support technique D-Link.
+
+
+
+Chère cliente/Cher client,
+
+Le code d'erreur 6 correspond à:
+"6: Class 2 frame received from nonauthenticated STA"
+
+Les causes peuvent êtres diverses, la plus probable étant lorsque un (ou plusieurs) client non encore pleinement authentifié/autorisé a essayé d'envoyer des données.
+
+Il peut s'agir d'une simple tentative de connexion (interne ou externe) avec un mot de passe erroné ou bien d'une attaque.
+
+Pourriez-vous SVP :
+- nous indiquer quel est le type d'authentification et le mode utilisés sur votre AP (WEP/WPA2...),
+- examiner vos logs pour voir si d'autres clients sont déconnectés,
+- vérifier si l'adresse MAC du client fait partie de votre réseau ou non,
+- l'OS du ou des clients (des problèmes avec des appareils iOS ont étés signalés par le passé),
+- la version du firmware de votre AP.
+
+Merci de votre réponse,
+
+Le Support Technique D-Link.
+
+ftp://ftp.dlink.de/dap/dap-2610/driver_software/DAP-2610_fw_reva_101b07rc024_en_20171108.zip
