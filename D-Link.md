@@ -59,7 +59,7 @@ DNA uses **SNMP** to discover hardware & IP's.
 | ------------- | ------------ | ----------------------- | ------------------------- |
 | Modem Routers | ISP/LAN/WAN  | DHCP/DNS/NAT            | -                         |
 | Routers       | LAN to LAN   | Manual configuration    | No extra NAT level/subnet |
-|               | LAN to WAN   | Automatic configuration | Extra NAT level/subnet    |
+| -             | LAN to WAN   | Automatic configuration | Extra NAT level/subnet    |
 
 ## Product Configuration Basics
 
@@ -78,8 +78,8 @@ DSL routers are handled by Level 1 Tech Support.
 | Model      | Users | Current Rev. | Notes |
 | ---------- | ----- | ------------ | ----- |
 | DSR-250N   | 10    | B            |       |
-| DSR-500N   | 25    |              | EOL   |
-| DSR-1000N  | 50    |              | EOL   |
+| DSR-500N   | 25    | -            | EOL   |
+| DSR-1000N  | 50    | -            | EOL   |
 | DSR-1000AC | 50    | A            |       |
 
 ### DES/DGS/DXS Switches
@@ -129,9 +129,9 @@ Allows control of DWL AP series.
 
 | Access Point Controllers | Access Points | Default IP                             | Notes                               |
 | ------------------------ | ------------- | -------------------------------------- | ----------------------------------- |
-| DWS (Manageable)         |               |                                        |                                     |
 | DWC                      | DAP*          | 192.168.10.1                           | Computer must be on the same subnet |
 | Nuclias                  | DBA*          | [nuclias.com](https://www.nuclias.com) | SaaS                                |
+| DWS                      | -             | 10.90.90.90/                           | EOL                                 |
 
 \*Some DAP/DBA cannot be managed.
 
@@ -157,9 +157,9 @@ Tip: Save configuration changes often to avoid reconfiguration after short timeo
 
 | Access Points | Default IP   | Notes              |
 | ------------- | ------------ | ------------------ |
-| :	DAP:        | 192.168.0.50 | Manageable via CWM |
-| :	DBA:        | nuclias.com  |                    |
-| :	DWL:        | 10.90.90.91  | Manageable via DWC |
+| DAP           | 192.168.0.50 | Manageable via CWM |
+| DBA           | nuclias.com  |                    |
+| DWL           | 10.90.90.91  | Manageable via DWC |
 
 #### Access Point Modes
 
@@ -207,7 +207,7 @@ Several configuration options: via the Setup Wizard (Windows/Mac) or manually vi
 
 | Cameras | Default IP   |
 | ------- | ------------ |
-| :DCS:   | 192.168.0.20 |
+| DCS     | 192.168.0.20 |
 
 ## FAQ
 
@@ -231,8 +231,8 @@ Several configuration options: via the Setup Wizard (Windows/Mac) or manually vi
 
 | Customer   | Case Management Section  | Code in report |
 | ---------- | ------------------------ | -------------- |
-| Without SN | Case <country> L2 w/o SN | :CL:           |
-| With SN    | Case <country> L2        | :CN:           |
+| Without SN | Case <country> L2 w/o SN | CL             |
+| With SN    | Case <country> L2        | CN             |
 
 **Case Inquiry View Layout & Format**
 
